@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Good_hair_ufa — салон красоты в Уфе, ул. Софьи Перовской, 52/2</title>
+<meta name="description" content="Кератин, ботокс, биозавивка, окрашивание и восстановление волос в Уфе. Онлайн-запись, цены на сайте.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F0F1EC;--ink:#1C211E;--mut:#5E665F;--line:#D3D8CF;--ph:#DCE0D6;--ac:#2F5A48;--dark:#1C2420}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:400 16px/1.5 Onest,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:4px}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:72px 0}
+h1,h2,h3{letter-spacing:-.03em;line-height:1}
+h1{font-size:clamp(48px,15vw,136px);font-weight:800}
+h2{font-size:clamp(32px,9vw,64px);font-weight:800;margin-bottom:40px}
+h2 sup{font-size:.32em;font-weight:500;color:var(--mut);margin-left:4px;vertical-align:top;position:relative;top:.2em}
+h3{font-size:24px;font-weight:700;letter-spacing:-.02em}
+.lnk{font-weight:700;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.mut{color:var(--mut)}
+.ph{background:var(--ph);display:flex;align-items:flex-end;padding:16px;font-size:13px;color:var(--mut)}
+/* text 3d flip (порт Magic UI Text3DFlip, top, stagger 30ms) */
+.fw{display:inline-block;white-space:nowrap;perspective:700px}
+.fc{display:inline-block;position:relative;transform-style:preserve-3d;transform:translateZ(-.5em);transition:transform .7s cubic-bezier(.34,1.56,.64,1);transition-delay:calc(var(--i)*30ms)}
+.fc>span{display:block}
+.fc .sz{visibility:hidden}
+.fc .ft,.fc .fb{position:absolute;inset:0;backface-visibility:hidden}
+.fc .ft{transform:translateZ(.5em)}
+.fc .fb{transform:rotateX(90deg) translateZ(.5em);color:var(--ac)}
+.is-flip .fc{transform:translateZ(-.5em) rotateX(-90deg)}
+@media (prefers-reduced-motion:reduce){.fc{transition:none}}
+/* header */
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.03em;text-decoration:none}
+nav{display:none;gap:32px;font-size:15px}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline;text-underline-offset:6px}
+/* hero */
+.hero{padding:48px 0 0}
+.hero h1{margin-bottom:24px}
+.hero p.lead{font-size:20px;line-height:1.4;max-width:30ch;margin-bottom:24px}
+.facts{display:grid;gap:8px;margin-bottom:32px;font-size:15px}
+.facts b{font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;margin-bottom:48px}
+.hero .ph{aspect-ratio:4/5;width:100%}
+/* price */
+.cats{display:grid;gap:48px}
+.cat h3{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.cat h3 span{font-size:14px;font-weight:500;color:var(--mut)}
+.row{display:flex;justify-content:space-between;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row b{font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.row small{display:block;font-size:14px;color:var(--mut)}
+.note{margin-top:24px;font-size:14px;color:var(--mut);max-width:56ch}
+/* works */
+.g{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g figure .ph{aspect-ratio:4/5}
+.g figcaption{font-size:14px;padding-top:8px}
+/* masters */
+.ms{display:grid;gap:40px}
+.ms .ph{aspect-ratio:3/4;margin-bottom:16px}
+.ms p{max-width:40ch;margin:8px 0 16px}
+/* trust */
+.dark{background:var(--dark);color:var(--bg)}
+.dark .mut{color:#A6AEA7}
+.steps{list-style:none;padding:0;counter-reset:s;border-top:1px solid #3A453E}
+.steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:8px 16px;padding:24px 0;border-bottom:1px solid #3A453E}
+.steps li:before{content:counter(s);font-weight:800;font-size:24px;color:#8FB5A2;grid-row:span 2}
+.steps b{font-size:20px;font-weight:700}
+/* gift */
+.gift{display:grid;gap:32px}
+.gift .ph{aspect-ratio:3/2}
+.gift p{max-width:44ch;margin-bottom:24px}
+/* reviews */
+.rv{display:grid;gap:32px}
+.rv blockquote{padding-top:16px;border-top:2px solid var(--ink);max-width:48ch}
+.rv blockquote p{font-size:18px;line-height:1.5;margin-bottom:16px}
+/* form */
+.book{background:#E5E8E0}
+.bk{display:grid;gap:48px}
+form{display:grid;gap:24px}
+label.f{display:grid;gap:8px;font-size:14px;color:var(--mut)}
+input[type=text],input[type=tel]{font:inherit;font-size:18px;height:56px;padding:0 16px;border:1px solid #B7BEB3;background:#F8F9F5;color:var(--ink);border-radius:0}
+input:focus{outline:2px solid var(--ac);outline-offset:0;border-color:var(--ac)}
+.hp{position:absolute;left:-9999px}
+.ck{display:grid;grid-template-columns:24px 1fr;gap:16px;font-size:14px;line-height:1.5;color:var(--mut)}
+.ck input{width:24px;height:24px;accent-color:var(--ac);margin:0}
+button{font:inherit;font-weight:700;font-size:18px;height:64px;border:0;background:var(--ac);color:#F8F9F5;cursor:pointer;border-radius:0}
+button:hover{background:#244838}
+button:disabled{opacity:.6;cursor:wait}
+#st{min-height:24px;font-weight:500}
+.ct{display:grid;gap:24px;align-content:start}
+.ct dt{font-size:14px;color:var(--mut)}
+.ct dd{font-size:20px;font-weight:500;margin-top:4px}
+.ct dd a{text-underline-offset:4px}
+footer{padding:32px 0;font-size:14px;color:var(--mut)}
+footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+@media (min-width:768px){
+ section{padding:112px 0}
+ .w{padding:0 40px}
+ nav{display:flex}
+ .cats{grid-template-columns:repeat(3,1fr);gap:40px}
+ .g{grid-template-columns:repeat(3,1fr);gap:16px}
+ .g figure:nth-child(3n+2){margin-top:48px}
+ .ms{grid-template-columns:repeat(3,1fr);gap:24px}
+ .rv{grid-template-columns:repeat(3,1fr);gap:40px}
+ .gift{grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+ .bk{grid-template-columns:1fr 1fr;gap:96px}
+ .steps li{grid-template-columns:64px 1fr 1fr;align-items:baseline}
+ .steps li:before{grid-row:auto}
+}
+@media (min-width:1100px){
+ .hero .w{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:end}
+ .hero .ph{aspect-ratio:4/5}
+ .hero-t{padding-bottom:48px}
+ .cta{margin-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="w">
+  <a class="logo" href="#top">Good_hair_ufa</a>
+  <nav aria-label="Разделы">
+   <a href="#price">Цены</a><a href="#works">Работы</a><a href="#masters">Мастера</a><a href="#safety">Стерильность</a><a href="#gift">Сертификаты</a><a href="#reviews">Отзывы</a>
+  </nav>
+  <a class="lnk" href="#book">Записаться</a>
+ </div>
+</header>
+
+<main id="top">
+
+<!-- 1. ПЕРВЫЙ ЭКРАН -->
+<section class="hero">
+ <div class="w">
+  <div class="hero-t">
+   <h1 data-flip>Волосы в порядке</h1>
+   <p class="lead">Кератин, ботокс, биозавивка, окрашивание и восстановление. Работаем по записи.</p>
+   <div class="facts">
+    <span><b>Уфа,</b> ул. Софьи Перовской, 52/2</span>
+    <!-- TODO: впишите часы работы -->
+    <span><b>Ежедневно</b> с 10:00 до 20:00</span>
+    <span><a href="tel:+70000000000">+7 (000) 000-00-00</a></span>
+   </div>
+   <div class="cta">
+    <a class="lnk" href="#book">Записаться онлайн</a>
+    <a class="lnk" href="#price">Смотреть цены</a>
+   </div>
+  </div>
+  <!-- TODO: замените на <img src="..." width="800" height="1000" alt="..."> -->
+  <div class="ph" role="img" aria-label="Фото: результат работы мастера">Фото 4:5, волосы после кератина</div>
+ </div>
+</section>
+
+<!-- 2. ПРАЙС -->
+<section id="price">
+ <div class="w">
+  <h2>Цены<sup>(7)</sup></h2>
+  <div class="cats">
+   <div class="cat">
+    <h3>Выпрямление и завивка <span>2</span></h3>
+    <div class="row"><span>Выпрямление BC Original, кератин</span><b>3 000 ₽</b></div>
+    <div class="row"><span>Биозавивка волос</span><b>3 000 ₽</b></div>
+   </div>
+   <div class="cat">
+    <h3>Уход и восстановление <span>3</span></h3>
+    <div class="row"><span>Ботокс или кератин</span><b>3 000 ₽</b></div>
+    <div class="row"><span>Холодное восстановление</span><b>1 500 ₽</b></div>
+    <div class="row"><span>Полировка секущихся волос</span><b>1 000 ₽</b></div>
+   </div>
+   <div class="cat">
+    <h3>Окрашивание <span>2</span></h3>
+    <div class="row"><span>Окрашивание</span><b>1 000 ₽</b></div>
+    <div class="row"><span>Выход из чёрного или тёмного</span><b>5 000 ₽</b></div>
+   </div>
+  </div>
+  <!-- TODO: подтвердите, зависит ли цена от длины волос -->
+  <p class="note">Точную стоимость мастер назовёт после осмотра волос. Запишитесь, и вы узнаете её до начала работы.</p>
+ </div>
+</section>
+
+<!-- 3. РАБОТЫ -->
+<section id="works" style="padding-top:0">
+ <div class="w">
+  <h2>Работы<sup>(6)</sup></h2>
+  <div class="g">
+   <!-- TODO: 6 реальных фото 4:5 (800×1000), подписи — услуга и мастер -->
+   <figure><div class="ph" role="img" aria-label="Фото работы">Фото 4:5</div><figcaption>Кератин</figcaption></figure>
+   <figure><div class="ph" role="img" aria-label="Фото работы">Фото 4:5</div><figcaption>Выход из тёмного</figcaption></figure>
+   <figure><div class="ph" role="img" aria-label="Фото работы">Фото 4:5</div><figcaption>Биозавивка</figcaption></figure>
+   <figure><div class="ph" role="img" aria-label="Фото работы">Фото 4:5</div><figcaption>Ботокс для волос</figcaption></figure>
+   <figure><div class="ph" role="img" aria-label="Фото работы">Фото 4:5</div><figcaption>Окрашивание</figcaption></figure>
+   <figure><div class="ph" role="img" aria-label="Фото работы">Фото 4:5</div><figcaption>Полировка</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<!-- 4. МАСТЕРА -->
+<section id="masters" style="padding-top:0">
+ <div class="w">
+  <h2>Мастера<sup>(3)</sup></h2>
+  <div class="ms">
+   <!-- TODO: имена, специализация, стаж, портреты 3:4 -->
+   <article><div class="ph" role="img" aria-label="Портрет мастера">Портрет 3:4</div><h3>Имя мастера</h3><p class="mut">Специализация и стаж. Одно предложение о том, с чем к ней идут чаще всего.</p><a class="lnk" href="#book" data-m="Имя мастера 1">Записаться к мастеру</a></article>
+   <article><div class="ph" role="img" aria-label="Портрет мастера">Портрет 3:4</div><h3>Имя мастера</h3><p class="mut">Специализация и стаж. Одно предложение о том, с чем к ней идут чаще всего.</p><a class="lnk" href="#book" data-m="Имя мастера 2">Записаться к мастеру</a></article>
+   <article><div class="ph" role="img" aria-label="Портрет мастера">Портрет 3:4</div><h3>Имя мастера</h3><p class="mut">Специализация и стаж. Одно предложение о том, с чем к ней идут чаще всего.</p><a class="lnk" href="#book" data-m="Имя мастера 3">Записаться к мастеру</a></article>
+  </div>
+ </div>
+</section>
+
+<!-- 5. СТЕРИЛИЗАЦИЯ И МАТЕРИАЛЫ -->
+<section id="safety" class="dark">
+ <div class="w">
+  <h2>Как мы работаем с инструментом и составами</h2>
+  <!-- TODO: проверьте каждый пункт, оставьте только то, что делается на самом деле -->
+  <ol class="steps">
+   <li><b>Инструмент обрабатывается после каждого клиента</b><span class="mut">Дезинфекция и стерилизация [способ: автоклав или сухожар], инструмент выдаётся в крафт-пакете.</span></li>
+   <li><b>Одноразовое остаётся одноразовым</b><span class="mut">Пелерины, воротнички и расходные материалы меняются на новые для каждого клиента.</span></li>
+   <li><b>Профессиональные составы</b><span class="mut">Для выпрямления используем BC Original. Перед процедурой мастер называет состав и показывает упаковку.</span></li>
+  </ol>
+ </div>
+</section>
+
+<!-- 6. СЕРТИФИКАТЫ -->
+<section id="gift">
+ <div class="w gift">
+  <div>
+   <h2>Подарочные сертификаты</h2>
+   <!-- TODO: номиналы, срок действия, электронный или бумажный -->
+   <p>Сертификат можно оформить на любую сумму или на конкретную услугу. Получатель сам выберет мастера и время.</p>
+   <a class="lnk" href="#book" data-m="Подарочный сертификат">Заказать сертификат</a>
+  </div>
+  <div class="ph" role="img" aria-label="Фото сертификата">Фото сертификата 3:2</div>
+ </div>
+</section>
+
+<!-- 7. ОТЗЫВЫ -->
+<section id="reviews" style="padding-top:0">
+ <div class="w">
+  <h2>Отзывы</h2>
+  <div class="rv">
+   <!-- TODO: реальные отзывы с разрешения клиентов, имя и услуга -->
+   <blockquote><p>Текст реального отзыва клиента. Один-два предложения о результате.</p><footer style="padding:0">Имя, кератин</footer></blockquote>
+   <blockquote><p>Текст реального отзыва клиента. Один-два предложения о результате.</p><footer style="padding:0">Имя, выход из тёмного</footer></blockquote>
+   <blockquote><p>Текст реального отзыва клиента. Один-два предложения о результате.</p><footer style="padding:0">Имя, биозавивка</footer></blockquote>
+  </div>
+  <!-- TODO: ссылка на карточку в картах -->
+  <p style="margin-top:40px"><a class="lnk" href="https://yandex.ru/maps/" target="_blank" rel="noopener">Все отзывы на картах</a></p>
+ </div>
+</section>
+
+<!-- 8. ОНЛАЙН-ЗАПИСЬ -->
+<section id="book" class="book">
+ <div class="w bk">
+  <div>
+   <h2>Запишитесь за минуту</h2>
+   <form id="f" novalidate>
+    <input type="hidden" id="master" name="master">
+    <label class="f">Имя<input type="text" id="name" name="name" autocomplete="given-name" required maxlength="80"></label>
+    <label class="f">Телефон<input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7" required maxlength="24"></label>
+    <div class="hp" aria-hidden="true"><input type="text" name="website" id="website" tabindex="-1" autocomplete="off"></div>
+    <label class="ck"><input type="checkbox" id="consent" required><span>Даю согласие на обработку персональных данных в соответствии с <a href="privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a>.</span></label>
+    <button type="submit" id="btn">Записаться</button>
+    <p id="st" role="status" aria-live="polite"></p>
+   </form>
+   <p class="mut" style="font-size:14px">Перезвоним в течение рабочего дня и подберём время.</p>
+  </div>
+  <dl class="ct">
+   <div><dt>Адрес</dt><dd>Уфа, ул. Софьи Перовской, 52/2</dd></div>
+   <div><dt>Телефон</dt><dd><a href="tel:+70000000000">+7 (000) 000-00-00</a></dd></div>
+   <div><dt>Часы работы</dt><dd>Ежедневно, 10:00–20:00</dd></div>
+   <div><dt>Написать</dt><dd><a href="https://t.me/good_hair_ufa" target="_blank" rel="noopener">Telegram</a></dd></div>
+   <div><dt>Как добраться</dt><dd><a href="https://yandex.ru/maps/?text=Уфа, ул. Софьи Перовской, 52/2" target="_blank" rel="noopener">Открыть на карте</a></dd></div>
+  </dl>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="w"><span>Good_hair_ufa, Уфа, ул. Софьи Перовской, 52/2</span><a href="privacy.html">Политика конфиденциальности</a></div>
+</footer>
+
+<script>
+(function(){
+ var f=document.getElementById('f'),st=document.getElementById('st'),btn=document.getElementById('btn'),m=document.getElementById('master');
+ document.querySelectorAll('[data-m]').forEach(function(a){a.addEventListener('click',function(){m.value=a.getAttribute('data-m')})});
+ f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('name').value.trim(),p=document.getElementById('phone').value.trim();
+  if(n.length<2){st.textContent='Укажите имя.';return}
+  if(p.replace(/\D/g,'').length<10){st.textContent='Проверьте номер телефона: нужно минимум 10 цифр.';return}
+  if(!document.getElementById('consent').checked){st.textContent='Отметьте согласие на обработку персональных данных.';return}
+  btn.disabled=true;st.textContent='Отправляем…';
+  fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,phone:p,master:m.value,website:document.getElementById('website').value})})
+  .then(function(r){if(!r.ok)throw 0;f.reset();m.value='';st.textContent='Заявка отправлена. Мы перезвоним в течение рабочего дня.'})
+  .catch(function(){st.textContent='Не получилось отправить. Позвоните нам: +7 (000) 000-00-00.'})
+  .then(function(){btn.disabled=false});
+ });
+})();
+</script>
+<script>
+/* Text3DFlip: любой элемент с data-flip переворачивается по буквам при наведении и один раз при загрузке */
+(function(){
+ var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ document.querySelectorAll('[data-flip]').forEach(function(el){
+  var t=el.textContent.trim(),i=0;
+  el.setAttribute('aria-label',t);el.textContent='';
+  t.split(' ').forEach(function(w,k){
+   if(k)el.appendChild(document.createTextNode(' '));
+   var ws=document.createElement('span');ws.className='fw';ws.setAttribute('aria-hidden','true');
+   w.split('').forEach(function(ch){
+    var c=document.createElement('span');c.className='fc';c.style.setProperty('--i',i++);
+    c.innerHTML='<span class="sz"></span><span class="ft"></span><span class="fb"></span>';
+    for(var j=0;j<3;j++)c.children[j].textContent=ch;
+    ws.appendChild(c);
+   });
+   el.appendChild(ws);
+  });
+  if(rm)return;
+  el.addEventListener('pointerenter',function(){el.classList.add('is-flip')});
+  el.addEventListener('pointerleave',function(){el.classList.remove('is-flip')});
+  setTimeout(function(){el.classList.add('is-flip');setTimeout(function(){el.classList.remove('is-flip')},1600)},500);
+ });
+})();
+</script>
+</body>
+</html>
